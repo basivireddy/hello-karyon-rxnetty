@@ -25,6 +25,7 @@ public class KaryonRxNettyExample {
     public static void main(String[] args) {
         System.out.println("hi");
         System.out.println("hi");
+        System.out.println("hi77777777");
         System.out.println("hihello44444");
         System.out.println("hi");
         System.out.println("hi");
