@@ -27,7 +27,6 @@ public class KaryonRxNettyExample {
         System.out.println("hi");
         System.out.println("hi77777777");
         System.out.println("hi");
-        System.out.println("hi");
         Karyon.forRequestHandler(8080,
                 new ExampleRouteInterceptor(),
                 new ArchaiusBootstrapModule("hello-karyon-rxnetty"),
