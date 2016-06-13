@@ -25,6 +25,7 @@ public class KaryonRxNettyExample {
     public static void main(String[] args) {
         System.out.println("changed text");
         System.out.println("hi89");
+        System.out.println("hi89");
         System.out.println("hi3455");
         Karyon.forRequestHandler(8080,
                 new ExampleRouteInterceptor(),
