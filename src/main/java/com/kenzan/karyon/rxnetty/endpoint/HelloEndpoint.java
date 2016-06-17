@@ -27,7 +27,7 @@ import rx.Observable;
 public class HelloEndpoint {
 
     public Observable<String> getHello() {
-        return Observable.just("Hello");
+        return Observable.just("Hello ,how are you");
     }
 
     public Observable<String> getHelloName(HttpServerRequest<ByteBuf> request) {
