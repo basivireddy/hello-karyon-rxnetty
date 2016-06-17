@@ -69,6 +69,12 @@ public class HelloResource implements RequestHandler<ByteBuf, ByteBuf>{
     @Override
     public Observable<Void> handle(HttpServerRequest<ByteBuf> request,
             HttpServerResponse<ByteBuf> response) {
+                try {
+                    Thread.sleep((long)(Math.random(6000)));
+                }
+                catch(Exception exec){
+                    System.out.println("Interrupted exception");
+                }
         return delegate.handle(request, response);
     }
 
