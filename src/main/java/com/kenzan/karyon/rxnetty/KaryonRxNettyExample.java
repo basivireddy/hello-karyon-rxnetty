@@ -23,7 +23,7 @@ import netflix.karyon.archaius.ArchaiusBootstrapModule;
 public class KaryonRxNettyExample {
 
     public static void main(String[] args) {
-        System.out.println("changed text changed text changed text changed textext changed text");
+        System.out.println("changed text changed text changedt");
         System.out.println("hi3455");
         System.out.println("changed text changed text changed text changed textext changed text");
         Karyon.forRequestHandler(8080,
