@@ -70,7 +70,7 @@ public class HelloResource implements RequestHandler<ByteBuf, ByteBuf>{
     public Observable<Void> handle(HttpServerRequest<ByteBuf> request,
             HttpServerResponse<ByteBuf> response) {
                 try {
-                    Thread.sleep(4000);
+                    Thread.sleep(10000);
                 }
                 catch(Exception exec){
                     System.out.println("Interrupted exception");
