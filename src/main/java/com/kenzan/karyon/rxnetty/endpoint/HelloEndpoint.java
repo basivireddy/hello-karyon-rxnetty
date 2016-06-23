@@ -34,6 +34,6 @@ public class HelloEndpoint {
         UriPattern pattern = new UriPattern(Pattern.compile("/hello/(.*)"));
         String name = pattern.match(request.getUri()).group(1);
 
-        return Observable.just("Hello,how are you sleep 10 sec" + name);
+        return Observable.just("Hello,how are you sleep 0 sec" + name);
     }
 }
