@@ -34,7 +34,6 @@ public class HelloResource implements RequestHandler<ByteBuf, ByteBuf>{
         endpoint = new HelloEndpoint();
         delegate = new SimpleUriRouter<>();
 
-
         delegate
         .addUri("/hello", new RequestHandler<ByteBuf, ByteBuf>() {
             @Override
