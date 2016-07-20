@@ -75,6 +75,7 @@ public class HelloResource implements RequestHandler<ByteBuf, ByteBuf>{
                 catch(Exception exec){
                     System.out.println("Interrupted exception");
                 }*/
+
         return delegate.handle(request, response);
     }
 
