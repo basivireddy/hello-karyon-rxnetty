@@ -69,6 +69,7 @@ public class HelloResource implements RequestHandler<ByteBuf, ByteBuf>{
     @Override
     public Observable<Void> handle(HttpServerRequest<ByteBuf> request,
             HttpServerResponse<ByteBuf> response) {
+
               /*  try {
                     Thread.sleep(10);
                 }
