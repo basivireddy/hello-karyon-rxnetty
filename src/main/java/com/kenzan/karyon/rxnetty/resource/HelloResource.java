@@ -79,5 +79,7 @@ public class HelloResource implements RequestHandler<ByteBuf, ByteBuf>{
 
         return delegate.handle(request, response);
     }
+    
+    
 
 }
