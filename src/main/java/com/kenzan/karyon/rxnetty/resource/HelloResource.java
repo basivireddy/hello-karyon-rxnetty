@@ -55,6 +55,7 @@ public class HelloResource implements RequestHandler<ByteBuf, ByteBuf>{
             public Observable<Void> handle(HttpServerRequest<ByteBuf> request,
                     final HttpServerResponse<ByteBuf> response) {
 
+
                 return endpoint.getHelloName(request)
                 .flatMap(new Func1<String, Observable<Void>>() {
                     @Override
