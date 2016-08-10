@@ -22,7 +22,7 @@ import io.reactivex.netty.protocol.http.server.RequestHandler;
 import netflix.karyon.transport.http.SimpleUriRouter;
 import rx.Observable;
 import rx.functions.Func1;
-
+import java.util.*;
 
 import com.kenzan.karyon.rxnetty.endpoint.HelloEndpoint;
 
@@ -30,6 +30,7 @@ public class HelloResource implements RequestHandler<ByteBuf, ByteBuf>{
 
     private final SimpleUriRouter<ByteBuf, ByteBuf> delegate;
     private final HelloEndpoint endpoint;
+    public static Map<BadKey,String> leakMap = new HashMap<>();
 
     public HelloResource() {
         endpoint = new HelloEndpoint();
@@ -71,16 +72,24 @@ public class HelloResource implements RequestHandler<ByteBuf, ByteBuf>{
     @Override
     public Observable<Void> handle(HttpServerRequest<ByteBuf> request,
             HttpServerResponse<ByteBuf> response) {
-
+               for(int i =0;i<2;i++){
+                   leakMap.put(new BadKey("key"), "value");
+               }    
                try {
-                    Thread.sleep(2);
+                    Thread.sleep(200);
                 }
                 catch(Exception exec){
                     System.out.println("Interrupted exception");
-                } 
+                }
             
 
         return delegate.handle(request, response);
+    }
+    
+    static class BadKey {
+        // no hashCode or equals();
+        public final String key;
+        public BadKey(String key) { this.key = key; }
     }
     
     
