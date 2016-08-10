@@ -72,7 +72,7 @@ public class HelloResource implements RequestHandler<ByteBuf, ByteBuf>{
     @Override
     public Observable<Void> handle(HttpServerRequest<ByteBuf> request,
             HttpServerResponse<ByteBuf> response) {
-               for(int i =0;i<2;i++){
+               for(int i =0;i<20;i++){
                    leakMap.put(new BadKey("key"), "value");
                }    
                try {
