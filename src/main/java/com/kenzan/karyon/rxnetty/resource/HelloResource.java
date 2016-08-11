@@ -74,13 +74,15 @@ public class HelloResource implements RequestHandler<ByteBuf, ByteBuf>{
             HttpServerResponse<ByteBuf> response) {
                for(int i =0;i<20;i++){
                    leakMap.put(new BadKey("key"), "value");
-               }    
-               try {
+               }
+               System.out.println("HashMap size : "+ leakMap.size());
+               /*try {
                     Thread.sleep(200);
+                    
                 }
                 catch(Exception exec){
                     System.out.println("Interrupted exception");
-                }
+                }*/
             
 
         return delegate.handle(request, response);
