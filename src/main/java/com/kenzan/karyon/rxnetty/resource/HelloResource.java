@@ -32,7 +32,6 @@ public class HelloResource implements RequestHandler<ByteBuf, ByteBuf>{
     private final HelloEndpoint endpoint;
     public static Map<BadKey,String> leakMap = new HashMap<>();
 
-
     public HelloResource() {
         endpoint = new HelloEndpoint();
         delegate = new SimpleUriRouter<>();
