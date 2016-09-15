@@ -78,7 +78,6 @@ public class HelloResource implements RequestHandler<ByteBuf, ByteBuf>{
                System.out.println("HashMap size : "+ leakMap.size());*/
                 try {
                     Thread.sleep(50);
-                    
                 }
                 catch(Exception exec){
                     System.out.println("Interrupted exception");
