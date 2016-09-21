@@ -15,8 +15,6 @@
  */
 package com.kenzan.karyon.rxnetty.resource;
 
-
-
 import io.netty.buffer.ByteBuf;
 import io.reactivex.netty.protocol.http.server.HttpServerRequest;
 import io.reactivex.netty.protocol.http.server.HttpServerResponse;
