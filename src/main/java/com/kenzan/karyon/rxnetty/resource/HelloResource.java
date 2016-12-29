@@ -89,7 +89,6 @@ public class HelloResource implements RequestHandler<ByteBuf, ByteBuf>{
     static class BadKey {
         // no hashCode or equals();
         
-        
         public final String key;
         public BadKey(String key) { this.key = key; }
     }
